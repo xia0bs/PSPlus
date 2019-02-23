@@ -6,7 +6,7 @@
             v-for="(item,index) in items"
             :key="index"
             :class="{'active':index%2 !== 1}"
-            :style="{backgroundImage: 'url(' + item.attributes['thumbnail-url-base'] + ')', backgroundRepeat:'no-repeat', backgroundPosition:'center center', backgroundSize:'cover'}">
+            :style="{backgroundImage: 'url(' + item.attributes['thumbnail-url-base'] + '?w=248&h=248' + ')', backgroundRepeat:'no-repeat', backgroundPosition:'center center', backgroundSize:'cover'}">
             <div class="cover"></div>
             <p>{{item.attributes.name}}</p>
         </li>
