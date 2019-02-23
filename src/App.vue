@@ -52,6 +52,7 @@
 }
 </script>
 <style>
+@import url('../static/swiper.min.css');
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;

@@ -1,5 +1,5 @@
 {
-  "name": "untitled",
+  "name": "PSPlus",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "xia0bs <719398840@qq.com>",
@@ -57,7 +57,7 @@
     "vue-template-compiler": "^2.5.2",
     "webpack": "^3.6.0",
     "webpack-bundle-analyzer": "^2.9.0",
-    "webpack-dev-server": "^3.1.14",
+    "webpack-dev-server": "^2.9.1",
     "webpack-merge": "^4.1.0"
   },
   "engines": {
