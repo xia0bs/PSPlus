@@ -5,4 +5,3 @@
 插件预览：
 
 <img src="https://ws4.sinaimg.cn/large/006tKfTcgy1g0k08o6mb3j30sh1j1qb7.jpg" width="250px">
-（暂时）
