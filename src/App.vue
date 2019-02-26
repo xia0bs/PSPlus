@@ -36,7 +36,7 @@
 
         this.$nextTick(() => {
           new Swiper('.swiper-container', {
-            slidesPerView: 2.3,
+            slidesPerView: 'auto',
             spaceBetween: 10,
             freeMode: true
           });
@@ -60,8 +60,9 @@
   text-align: center;
   color: #2c3e50;
   max-width: 100%;
-  height: 140px;
-  padding: 10px;
+  height: 160px;
+  user-select: none;
+    padding: 0 20px 0;
 }
 *{
   padding: 0;
@@ -77,6 +78,7 @@
   font-size: 14px;
   position: relative;
   overflow: hidden;
+  width: 160px;
 }
 .swiper-slide a{
   height: 140px;
