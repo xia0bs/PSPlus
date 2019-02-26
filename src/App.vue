@@ -35,8 +35,7 @@
       }
     })
       .then((res)=>{
-        this.items = res.data.included
-
+        this.items = res.data.included;
         this.$nextTick(() => {
           new Swiper('.swiper-container', {
             slidesPerView: 'auto',
@@ -67,7 +66,6 @@
   -moz-user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
-  -khtml-user-select: none;
   user-select: none;
   padding: 0 15px 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
@@ -108,7 +106,7 @@
     content:"";
     display:block;
     height:0;
-    border-width:0px 15px 15px;
+    border-width:0 15px 15px;
     border-style:none solid solid;
     border-color:transparent transparent #ffe312;
     position:absolute;
@@ -119,6 +117,7 @@
     left: -18px;
     top: 17px;
     width: 56px;
+    opacity: .9;
 }
 .badge span{
     position: absolute;
@@ -128,6 +127,7 @@
     right: 0;
     font-size: 12px;
     color: #472400;
+    font-weight: bold;
 }
 .cover{
   position: absolute;
