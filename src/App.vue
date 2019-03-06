@@ -67,7 +67,6 @@
   -webkit-user-select: none;
   -ms-user-select: none;
   user-select: none;
-  padding: 0 15px 0;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 *{
@@ -77,6 +76,7 @@
 }
 .swiper-container{
   height: 100%;
+  padding: 0 15px 0;
 }
 .swiper-slide{
   border-radius: 10px;
