@@ -77,6 +77,7 @@
 .swiper-container{
   height: 100%;
   padding: 0 15px 0;
+
 }
 .swiper-slide{
   border-radius: 10px;
