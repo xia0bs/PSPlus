@@ -2,16 +2,16 @@
   <div id="app">
     <div class="swiper-container">
       <ul class="swiper-wrapper content">
-        <li class="swiper-slide"
+          <li class="swiper-slide"
             v-for="(item,index) in items"
             :key="index"
-            :class="{'active':index%2 !== 1}"
-            :style="{backgroundImage: 'url(' + item.attributes['thumbnail-url-base'] + '?w=248&h=248' + ')', backgroundRepeat:'no-repeat', backgroundPosition:'center center', backgroundSize:'cover'}">
-            <div class="badge">
-                <span>{{item.attributes.platforms[0]}}</span>
+            :style="{backgroundImage: 'url(' + item['thumbnail_url'] + '?w=248&h=248' + ')', backgroundRepeat:'no-repeat', backgroundPosition:'center center', backgroundSize:'cover'}">
+              <div class="badge">
+                <span>{{item.platforms[0]}}</span>
             </div>
-            <div class="cover"></div>
-            <p>{{item.attributes.name}}</p>
+            <div class="cover">
+            <p>{{item.display_name || item.name}}</p>
+            </div>
         </li>
       </ul>
     </div>
@@ -27,15 +27,13 @@
     }
   },
   mounted () {
-    this.axios.get('api/valkyrie-api/zh/HK/19/container/STORE-MSF86012-PLUS_FTT_CONTENT', {
+    this.axios.get('api/365call-api/api/v3/games?is_free=true&region=HONG_KONG&content_type=GAME&page=1&page_size=25&sort=RELEASE_DATE_DESC', {
       params: {
-        size: 30,
-        bucket: 'games',
-        start: 0
+
       }
     })
       .then((res)=>{
-        this.items = res.data.included;
+        this.items = res.data.data.list;
         this.$nextTick(() => {
           new Swiper('.swiper-container', {
             slidesPerView: 'auto',
@@ -87,6 +85,9 @@
   overflow: hidden;
   width: 160px;
 }
+.swiper-slide:nth-of-type(1){
+  margin-right: 0;
+}
 .swiper-slide a{
   height: 140px;
   display: block;
@@ -126,6 +127,7 @@
     bottom: 0;
     left: 0;
     right: 0;
+    height: 18px;
     font-size: 12px;
     color: #472400;
     font-weight: bold;
@@ -136,9 +138,10 @@
   left: 0;
   width: 100%;
   height: 30px;
-  background: rgba(0,0,0,.6);
+  background: rgba(0,0,0,.5);
 }
-.active{
-  display: none;
+/*
+.active{display: none;
 }
+*/
 </style>
